@@ -1,0 +1,10 @@
+// _.filter
+// _.find
+// _.map
+// _.forEach
+// _.reduce
+// _.pluck
+// _.sample
+// _.countBy
+// _.sortBy
+// _.where
