@@ -18,11 +18,9 @@ describe("About Object Methods", function() {
     expect(_.merge(users, ages)).toEqual({'data': [{'user': 'barney', 'age': 36}, {'user': 'fred', 'age': 40}]});
   });
 
-  it("should creates an object composed of the picked object properties", function () {
+  it("should create an object composed of the picked object properties", function () {
     var object = { 'user': 'fred', 'age': 40 };
 
     expect(_.pick(object, 'user')).toEqual({ 'user': 'fred' });
   });
-
-
 });
