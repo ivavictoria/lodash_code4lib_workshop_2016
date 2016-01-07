@@ -15,7 +15,7 @@ describe("About Array Methods", function() {
     expect(_.compact(array)).toEqual([1, 2,3]);
   });
 
-  it("should create an array of unique array values not included in the other provided arrays using SameValueZero for equality comparisons", function () {
+  it("should create an array of unique array values not included in the other provided arrays", function () {
     var array1 = [1, 2, 3];
     var array2 = [4, 2];
 
@@ -46,7 +46,7 @@ describe("About Array Methods", function() {
     expect(_.union(array1, array2, array2)).toEqual([1, 2, 4])
   });
 
-  it("Creates a duplicate-free version of an array", function () {
+  it("create a duplicate-free version of an array", function () {
     var array1 = [2, 1, 2];
 
     expect(_.uniq(array1)).toEqual([2, 1])
