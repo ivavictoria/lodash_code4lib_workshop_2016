@@ -29,7 +29,6 @@ describe("About Array Methods", function() {
     //If isDeep is true the array is recursively flattened, otherwise it’s only flattened a single level
     var array = [1, [2, 3, [4]]];
     expect(_.flatten(array)).toEqual([1, 2, 3, [4]]);
-    expect(_.flatten(array, true)).toEqual([1, 2, 3, 4]);
     expect(_.flattenDeep(array)).toEqual([1, 2, 3, 4]);
   });
 

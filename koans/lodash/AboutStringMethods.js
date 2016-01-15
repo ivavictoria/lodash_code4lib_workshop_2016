@@ -42,7 +42,7 @@ describe("About String Methods", function() {
 
   it("should truncate string if it is longer than the given maximum string length", function () {
     // https://lodash.com/docs#trunc
-    expect(_.trunc('hi-diddly-ho there, neighborino')).toEqual('hi-diddly-ho there, neighbo...');
+    expect(_.truncate('hi-diddly-ho there, neighborino')).toEqual('hi-diddly-ho there, neighbo...');
   });
 
   it("should convert the HTML entities in string to their corresponding characters", function () {
