@@ -5,6 +5,10 @@ describe("About Applying What We Have Learnt", function () {
     }
   })
 
+
+  // Methods to test?
+  // _.capitalize (_.map over array)
+  // phone number manipulation
   it("should test out some stuff", function () {
     
     beer_data = _.cloneDeep(clean_beer)

@@ -3,7 +3,6 @@
 // _.reduce
 // _.filter
 // _.find
-// _.where
 
 describe("About Collection Methods", function() {
 
@@ -106,16 +105,5 @@ describe("About Collection Methods", function() {
 
     // _.matches callback shorthand
     expect(_.find(users, {'active': true})).toEqual({ 'user': 'barney', 'age': 36, 'active': true })
-  });
-
-  it("should return an array of all elements that have equivalent property values", function () {
-    // https://lodash.com/docs#where
-    var users = [
-      { 'user': 'barney', 'age': 36, 'active': false, 'pets': ['hoppy'] },
-      { 'user': 'fred',   'age': 40, 'active': true, 'pets': ['baby puss', 'dino'] }
-    ];
-
-    expect(_.where(users, {'age': 36})).toEqual([ { user : 'barney', age : 36, active : false, pets : [ 'hoppy' ] } ]);
-    expect(_.where(users, {'pets': ['dino']})).toEqual([ { user : 'fred', age : 40, active : true, pets : [ 'baby puss', 'dino' ] } ]);
   });
 });
