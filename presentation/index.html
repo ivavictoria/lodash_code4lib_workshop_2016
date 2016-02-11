@@ -85,7 +85,7 @@
         <section>
           <pre><code data-noescape>
   function setLocsDisplayStatus () {
-    <mark>var states = _.uniq(_.pluck(scope.locs, 'filter'));</mark>
+    var states = <mark>_.uniq</mark>(<mark>_.pluck</mark>(scope.locs, 'filter'));
 
     if (_.contains(states, false)) {
       scope.display = true;
@@ -106,7 +106,7 @@
   function setLocsDisplayStatus () {
     var states = _.uniq(_.pluck(scope.locs, 'filter'));
 
-    <mark>if (_.contains(states, false)) {</mark>
+    if (<mark>_.contains</mark>(states, false)) {
       scope.display = true;
       scope.locsActive = true;
     } else {
@@ -123,6 +123,14 @@
         <section>
           <pre><code data-noescape>
   chldrnCnts = _.map(chldrn, function (o) {
+    return calcCount(o, coll, prop);
+  });
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code data-noescape>
+  chldrnCnts = <mark>_.map</mark>(chldrn, function (o) {
     return calcCount(o, coll, prop);
   });
           </code></pre>
