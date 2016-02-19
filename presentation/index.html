@@ -66,6 +66,32 @@
         </section>
 
         <section>
+          <h3>Naive</h3>
+          <pre><code data-noescape>
+Object.prototype.pick = function(arr) {
+    var _this = this;
+    var obj = {};
+    arr.forEach(function(key){
+        obj[key] = _this[key];
+    });
+    return obj;
+};
+
+var objA = {"name": "colin", "car": "suzuki", "age": 17};
+var objB = objA.pick(['car', 'age']);
+// {"car": "suzuki", "age": 17}
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Lodash</h3>
+          <pre><code data-noescape>
+var objB = _.pick(objA, ['car', 'age']);
+// {"car": "suzuki", "age": 17}
+          </code></pre>
+        </section>
+
+        <section>
           <img src="images/npm-depended.png" height="500" />
           <h3>lodash is currently the most depended upon package on NPM</h3>
         </section>
