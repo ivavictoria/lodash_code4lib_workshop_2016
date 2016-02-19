@@ -92,6 +92,16 @@ var objB = _.pick(objA, ['car', 'age']);
         </section>
 
         <section>
+          <h2>Other reasons to use Lodash.js</h2>
+          <ul>
+            <li>Improved Performance</li>
+            <li>Easier to write and maintain</li>
+            <li>Bridge the gap between ECMA specifications</li>
+            <li>Normalize code across browsers</li>
+          </ul>
+        </section>
+
+        <section>
           <img src="images/npm-depended.png" height="500" />
           <h3>lodash is currently the most depended upon package on NPM</h3>
         </section>
@@ -110,6 +120,7 @@ var objB = _.pick(objA, ['car', 'age']);
         </section>
 
         <section>
+          <h3>Example 1</h3>
           <pre><code data-noescape>
   function setLocsDisplayStatus () {
     var states = _.uniq(_.pluck(scope.locs, 'filter'));
@@ -129,6 +140,7 @@ var objB = _.pick(objA, ['car', 'age']);
         </section>
 
         <section>
+          <h3>Example 1</h3>
           <pre><code data-noescape>
   function setLocsDisplayStatus () {
     var states = <mark>_.uniq</mark>(<mark>_.pluck</mark>(scope.locs, 'filter'));
@@ -148,6 +160,7 @@ var objB = _.pick(objA, ['car', 'age']);
         </section>
 
         <section>
+          <h3>Example 1</h3>
           <pre><code data-noescape>
   function setLocsDisplayStatus () {
     var states = _.uniq(_.pluck(scope.locs, 'filter'));
@@ -167,6 +180,7 @@ var objB = _.pick(objA, ['car', 'age']);
         </section>
 
         <section>
+          <h3>Example 2</h3>
           <pre><code data-noescape>
   chldrnCnts = _.map(chldrn, function (o) {
     return calcCount(o, coll, prop);
@@ -175,6 +189,7 @@ var objB = _.pick(objA, ['car', 'age']);
         </section>
 
         <section>
+          <h3>Example 2</h3>
           <pre><code data-noescape>
   chldrnCnts = <mark>_.map</mark>(chldrn, function (o) {
     return calcCount(o, coll, prop);
