@@ -96,7 +96,7 @@ describe("About Applying What We Have Learnt", function () {
     var ary = [false, 0, 0, true, true];
     var final = FILL_ME_IN;
 
-    var final = _(ary).compact().uniq().value()
+    var final = _(ary).compact().uniq().value();
 
     expect(final).toEqual([true]);
     if (_.isEqual(final, [true])) {
@@ -104,4 +104,40 @@ describe("About Applying What We Have Learnt", function () {
     }
   });
 
+  it("should return an array of the top 5 objects by BA score", function () {
+    // Try using chaining! https://lodash.com/docs#_
+    // Tip: Use _.sortBy, _.reverse, _.take, and _.value
+
+    var top5 = _(clean_beer_data).sortBy("scores.ba_score").reverse().take(5).value();
+    expect(top5).toEqual(top_5_by_ba_score);
+  });
+
+  it("should calculate the number of breweries", function () {
+    // Try using chaining! https://lodash.com/docs#_
+    // Tip: _.filter and _.size
+
+    var number_of_breweries = _(clean_beer_data).filter({"type": "brewery"}).size();
+    expect(number_of_breweries).toEqual(9);
+  });
+
+  it("should calculate the avg BA score", function () {
+    // Try using chaining! https://lodash.com/docs#_
+    // Tip: _.map and _.mean
+
+    var average_ba_score = _(clean_beer_data).map('scores.ba_score').mean();
+    expect(average_ba_score).toEqual(76.66037735849056);
+  });
+
+  it("should find the most common zipcode", function () {
+    // Try using chaining! https://lodash.com/docs#_
+    // Tip: _.map, _.countBy, _.toPairs, _.sortBy (use our sorting function),
+    // _.take, _.fromPairs, _.keys, and _.first!!! Whew!
+
+    function sortPairs (p) {
+	     return -p[1];
+     }
+
+     var most_common_zip = _(clean_beer_data).map('zip').countBy().toPairs().sortBy(sortPairs).take(1).fromPairs().keys().first();
+     expect(most_common_zip).toEqual("19147");
+  });
 });
