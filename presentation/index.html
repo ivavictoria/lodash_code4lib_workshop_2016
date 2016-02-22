@@ -62,11 +62,20 @@
         </section>
 
         <section>
+          <h2>What is lodash.js?</h2>
+          <ul>
+            <li>Modular library containing utility functions for working with arrays, numbers, objects, strings etc.</li>
+            <li>First released in 2012, forked from Underscore.js</li>
+            <li>Current version: 4.5</li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Why lodash.js?</h2>
         </section>
 
         <section>
-          <h3>Naive</h3>
+          <h3>Native</h3>
           <pre><code data-noescape>
 Object.prototype.pick = function(arr) {
     var _this = this;
@@ -94,11 +103,46 @@ var objB = _.pick(objA, ['car', 'age']);
         <section>
           <h2>Other reasons to use Lodash.js</h2>
           <ul>
-            <li>Improved Performance</li>
+            <li>Improved performance</li>
             <li>Easier to write and maintain</li>
             <li>Bridge the gap between ECMA specifications</li>
             <li>Normalize code across browsers</li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Performance</h2>
+          <ul>
+            <li>Performance improvements focus on several key aspects:
+              <ul>
+                <li>Optimize across all browsers</li>
+                <li>Optimizing for the common case</li>
+                <li>Relying on native JS functions rather than reusing Lodash methods</li>
+              </ul>
+            </li>
+            <li>Lodash methods generally perform faster than their native equivalents</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Example</h2>
+          <img src="images/lodash-vs-native.png" />
+          <img src="images/lodash-vs-native-results.png" />
+        </section>
+
+        <section>
+          <h2>Lazy Evaluation for Chainable Methods</h2>
+          <ul>
+            <li>Lodash version 3.0 saw the addition of lazy evaluation</li>
+            <li>Evaluate method chain beforehand to figure out minimum number of cycles to get correct result, execute only when needed</li>
+            <li>Results in large performance gains</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Example</h2>
+          <img src="images/lazy-test-code.png" height="250" />
+          <img src="images/lazy-test.png" />
         </section>
 
         <section>
