@@ -91,16 +91,15 @@ describe("About Applying What We Have Learnt", function () {
   });
 
 
+  it("should remove falsely values and return unique", function () {
+    // use _.compact and _.uniq
+    var ary = [false, 0, 0, true, true];
+    var final = FILL_ME_IN;
 
+    var final = _(ary).compact().uniq().value()
 
-  // Methods to test?
-  // _.capitalize (_.map over array)
-  // phone number manipulation
-  it("should test out some stuff", function () {
-
-    beer_data = _.cloneDeep(clean_beer_data);
-    expect(true).toEqual(true);
-    if (_.isEqual(beer_data, clean_beer_data)) {
+    expect(final).toEqual([true]);
+    if (_.isEqual(final, [true])) {
       drawMap();
     }
   });
