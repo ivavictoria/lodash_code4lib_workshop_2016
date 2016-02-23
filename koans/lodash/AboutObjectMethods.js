@@ -16,13 +16,13 @@ describe("About Object Methods", function() {
       'data': [{ 'age': 36 }, { 'age': 40 }]
     };
 
-    expect(_.merge(users, ages)).toEqual({'data': [{'user': 'barney', 'age': 36}, {'user': 'fred', 'age': 40}]});
+    expect(_.merge(users, ages)).toEqual(FILL_ME_IN);
   });
 
   it("should create an object composed of the picked object properties", function () {
     // https://lodash.com/docs#pick
     var object = { 'user': 'fred', 'age': 40 };
 
-    expect(_.pick(object, 'user')).toEqual({ 'user': 'fred' });
+    expect(_.pick(object, 'user')).toEqual(FILL_ME_IN);
   });
 });
