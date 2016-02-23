@@ -45,10 +45,34 @@
 
         <section>
           <h2>Getting the workshop materials</h2>
+          <br />
           <h4><a href="http://github.ncsu.edu/bddavids/code4lib_javascript_workshop/">http://github.ncsu.edu/bddavids/code4lib_javascript_workshop/</a></h4>
+          <br />
           <pre><code data-noescape>
   git clone git@github.ncsu.edu:bddavids/code4lib_javascript_workshop
           </code></pre>
+        </section>
+
+        <section>
+          <h2>Agenda</h2>
+          <table>
+            <tr>
+              <td>9:00-9:15</td>
+              <td>Introductions</td>
+            </tr>
+            <tr>
+              <td>9:15-9:45</td>
+              <td>Presentation &amp; Workshop Intro</td>
+            </tr>
+            <tr>
+              <td>9:45-10:00</td>
+              <td>Break</td>
+            </tr>
+            <tr>
+              <td>10:00-12:00</td>
+              <td>Hands-on Workshop</td>
+            </tr>
+          </table>
         </section>
 
         <section>
@@ -63,8 +87,8 @@
         <section>
           <h2>Why JS?</h2>
           <ul>
-            <li>Lingua franca for frontend development</li>
             <li>Increased focus on client side application development</li>
+            <li>Lingua franca for frontend development</li>
             <li>Node.js increasingly popular for backend development in JS</li>
           </ul>
         </section>
@@ -123,9 +147,9 @@ var objB = _.pick(objA, ['car', 'age']);
           <ul>
             <li>Performance improvements focus on several key aspects:
               <ul>
-                <li>Optimize across all browsers</li>
+                <li>Optimizing across all browsers</li>
                 <li>Optimizing for the common case</li>
-                <li>Relying on native JS functions rather than reusing Lodash methods</li>
+                <li>Avoid using native JS methods (build on simple for-loops instead)</li>
               </ul>
             </li>
             <li>Lodash methods generally perform faster than their native equivalents</li>
