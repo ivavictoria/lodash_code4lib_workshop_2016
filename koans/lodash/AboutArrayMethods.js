@@ -56,4 +56,6 @@ describe("About Array Methods", function() {
 
     expect(_.uniq(array1)).toEqual(FILL_ME_IN);
   });
+
+  // Move on to AboutObjectMethods.js!
 });

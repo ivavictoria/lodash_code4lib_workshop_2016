@@ -110,4 +110,6 @@ describe("About Applying What We Have Learnt", function () {
      var most_common_zip = FILL_ME_IN;
      expect(most_common_zip).toEqual("19147");
   });
+
+  // Congratulations! You made it to then end!
 });

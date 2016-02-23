@@ -25,4 +25,6 @@ describe("About Object Methods", function() {
 
     expect(_.pick(object, 'user')).toEqual(FILL_ME_IN);
   });
+
+  // Move on to AboutStringMethods.js!
 });

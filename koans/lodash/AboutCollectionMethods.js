@@ -86,7 +86,7 @@ describe("About Collection Methods", function() {
     expect(underForty).toEqual(FILL_ME_IN);
 
     // _.matches callback shorthand
-    expect(_.filter(users, {'age':36})).toEqual(FILL_ME_IN)
+    expect(_.filter(users, {'age':36})).toEqual(FILL_ME_IN);
   });
 
   it("should return the FIRST element predicate returns truthy for", function () {
@@ -106,4 +106,6 @@ describe("About Collection Methods", function() {
     // _.matches callback shorthand
     expect(_.find(users, {'active': true})).toEqual(FILL_ME_IN);
   });
+
+  // Move on to AboutArrayMethods.js!
 });

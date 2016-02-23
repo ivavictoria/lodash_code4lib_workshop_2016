@@ -54,4 +54,6 @@ describe("About String Methods", function() {
     // https://lodash.com/docs#words
     expect(_.words('fred, barney, & pebbles')).toEqual(FILL_ME_IN);
   });
+
+  // Move on to AboutApplyingWhatWeHaveLearnt.js!
 });
