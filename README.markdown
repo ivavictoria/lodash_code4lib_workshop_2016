@@ -1,43 +1,36 @@
-# javascript-koans
+# Code4Lib 2016
+## lodash.js API Tour
 
 Borrowed from: https://github.com/mrdavidlaing/javascript-koans
 
-Based on Edgecase's fantastic 
-[Ruby koans](http://github.com/edgecase/ruby_koans), the goal of the
-Javascript koans is to teach you Javascript programming through
-testing.
+The goal of the lodash.js koans is to orient you to the [lodash](https://lodash.com/) JavaScript library through
+automated testing.
 
 When you first run the koans, you'll be presented with a runtime error and a
 stack trace indicating where the error occurred. Your goal is to make the
 error go away. As you fix each error, you should learn something about the
-Javascript language and functional programming in general.
+lodash.js library.
 
-Your journey towards Javascript enlightenment starts in the koans/AboutExpects.js file. These
-koans will be very simple, so don't overthink them! As you progress through
-more koans, more and more Javascript syntax will be introduced which will allow
-you to solve more complicated problems and use more advanced techniques.
+## Orientation
 
-## Running the Koans
 Simply navigate to the Javascript Koans folder using a file browser, and
-double click on KoansRunnner.html. 
+double click on `KoansRunnnerJS.html`.
 
 Any browser will do, but for the best results Firefox or Chrome is
 recommended. More stack trace information shows up for javascript on these
 browsers.
 
-The first error will be in koans/AboutExpects.js. Fix the first test and
+The first error will be in `koans/js/AboutExpects.js`. Fix the first test and
 refresh the browser. Rinse and repeat until all tests turn green.
 
-The test runner used is [Jasmine](http://jasmine.github.io/) with a customized report viewer.
+## Running the Koans
 
-### Changelog
-*  v3 - Nov 2010  - Moved out of branch of functional-koans project, into own top level project
-*  v2 - Sept 2010 - Second version based on jasmine (Thanks Greg Malcolm!)
-*  v1 - July 2010 - First version based on jsTestDriver
+After completing `koans/js/AboutExpects.js`, open `KoansRunnerLoDash.html` and `koans/lodash/AboutCollectionMethods.js` to begin the lodash.js API tour.
 
 ### Acknowledgements
+*  David Laing
 *  Dick Wall (the Java posse) - for bringing the idea of koans to my attention
-*  Edgecase - for the great Ruby Koans
-*  Douglas Crockford - for Javascript; the good bits
+*  Edgecase - for the great [Ruby koans](http://github.com/edgecase/ruby_koans)
+*  The test runner used is [Jasmine](http://jasmine.github.io/) with a customized report viewer.
 
 ### [MIT Licensed](LICENSE)
