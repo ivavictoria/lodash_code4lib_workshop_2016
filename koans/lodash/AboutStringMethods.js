@@ -1,7 +1,6 @@
 // _.camelCase
 // _.capitalize
 // _.escape
-// _.pad
 // _.trim
 // _.trunc
 // _.unescape
@@ -10,10 +9,18 @@
 describe("About String Methods", function() {
 
   //We shall contemplate truth by testing reality, via spec expectations.
-  it("should convert string to camel case", function () {
+  it("should convert string to camel case (1)", function () {
     // https://lodash.com/docs#camelCase
     expect(_.camelCase('Foo Bar')).toEqual(FILL_ME_IN);
+  });
+
+  it("should convert string to camel case (2)", function () {
+    // https://lodash.com/docs#camelCase
     expect(_.camelCase('--foo-bar')).toEqual(FILL_ME_IN);
+  });
+
+  it("should convert string to camel case (3)", function () {
+    // https://lodash.com/docs#camelCase
     expect(_.camelCase('__foo_bar__')).toEqual(FILL_ME_IN);
   });
 
@@ -27,16 +34,13 @@ describe("About String Methods", function() {
     expect(_.escape('fred, barney, & pebbles')).toEqual(FILL_ME_IN);
   });
 
-  it("should pad string on the left and right sides", function () {
-    // https://lodash.com/docs#pad
-    expect(_.pad('abc', 8)).toEqual(FILL_ME_IN);
-    expect(_.pad('abc', 8, '_-')).toEqual(FILL_ME_IN);
-    expect(_.pad('abc', 3)).toEqual(FILL_ME_IN);
-  });
-
-  it("should remove leading and trailing whitespace or specified characters from string", function () {
+  it("should remove leading and trailing whitespace or specified characters from string (1)", function () {
     // https://lodash.com/docs#trim
     expect(_.trim('  abc  ')).toEqual(FILL_ME_IN);
+  });
+
+  it("should remove leading and trailing whitespace or specified characters from string (2)", function () {
+    // https://lodash.com/docs#trim
     expect(_.trim('-_-abc-_-', '_-')).toEqual(FILL_ME_IN);
   });
 
@@ -50,7 +54,7 @@ describe("About String Methods", function() {
     expect(_.unescape('fred, barney, &amp; pebbles')).toEqual(FILL_ME_IN);
   });
 
-  it("should pad split string into an array of its words", function () {
+  it("should split string into an array of its words", function () {
     // https://lodash.com/docs#words
     expect(_.words('fred, barney, & pebbles')).toEqual(FILL_ME_IN);
   });

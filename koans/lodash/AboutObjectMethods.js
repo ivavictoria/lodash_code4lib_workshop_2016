@@ -1,7 +1,5 @@
 // _.merge
 // _.pick
-// _.get
-// _.set
 
 describe("About Object Methods", function() {
 

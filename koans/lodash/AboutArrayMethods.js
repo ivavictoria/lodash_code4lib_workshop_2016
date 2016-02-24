@@ -24,11 +24,17 @@ describe("About Array Methods", function() {
     expect(_.difference(array1, array2)).toEqual(FILL_ME_IN);
   });
 
-  it("should flatten a nested array", function () {
+  it("should flatten a nested array (1)", function () {
     // https://lodash.com/docs#flatten
-    //If isDeep is true the array is recursively flattened, otherwise it’s only flattened a single level
     var array = [1, [2, 3, [4]]];
+
     expect(_.flatten(array)).toEqual(FILL_ME_IN);
+  });
+
+  it("should flatten a nested array (2)", function () {
+    // https://lodash.com/docs#flatten
+    var array = [1, [2, 3, [4]]];
+
     expect(_.flattenDeep(array)).toEqual(FILL_ME_IN);
   });
 
