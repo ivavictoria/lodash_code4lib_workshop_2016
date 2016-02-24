@@ -51,15 +51,16 @@ describe("About Applying What We Have Learnt", function () {
   });
 
   it("nest all scores into one scores object property", function () {
-    // Create a function named trimStreetAddress that returns an array
-    // of objects with whitespace removed from the steet_address property
-    // Tip: use _.map and _.trim
-    function trimStreetAddress (data) {
+    // Create a function named nestScores that returns an array
+    // of objects with all three beer scores inside of a new object
+    // named scores and "unsets" the old properties.
+    // Tip: use _.map and _.unset
+    function nestScores (data) {
       // FILL IN FUNCTION
       return FILL_ME_IN;
     }
 
-    expect(trimStreetAddress(_.cloneDeep(beer_data_5))).toEqual(clean_beer_data);
+    expect(nestScores(_.cloneDeep(beer_data_5))).toEqual(clean_beer_data);
   });
 
   it("should remove falsely values and return unique", function () {
