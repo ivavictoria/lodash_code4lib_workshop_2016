@@ -4,7 +4,11 @@ describe("About Applying What We Have Learnt", function () {
     // Create a function named filterNoScores that returns an array
     // of objects that have at least one of ba_score, local_score, OR
     // beer_avg_score
-    // Tip: use _.filter
+    // Tip: Return _.filter with a callback function to process data
+    // Tip: Make beer_data_1.js look like beer_data_2.js. These
+    // files are in the lib directory of this project.
+    // Tip: if you get stuck, example solutions are inside
+    // the koans/lodash/solutions directory of this project
     function filterNoScores (data) {
       // FILL IN FUNCTION
       return FILL_ME_IN;
@@ -17,7 +21,8 @@ describe("About Applying What We Have Learnt", function () {
     // Create a function named splitLatLong that returns an array
     // of objects with separate properties named lat and long and removes
     // the original property "lat_long"
-    // Tip: use _.map, _.split, _.toNumber, _.unset
+    // Tip: Return _.map and use _.split, _.toNumber, and _.unset in the callback
+    // Tip: Make beer_data_2.js look like beer_data_3.js
     function splitLatLong (data) {
       // FILL IN FUNCTION
       return FILL_ME_IN;
@@ -29,7 +34,8 @@ describe("About Applying What We Have Learnt", function () {
   it("capitalize the city value", function () {
     // Create a function named capitalizeCity that returns an array
     // of objects the city property capitalized
-    // Tip: use _.map and _.capitalize
+    // Tip: Return _.map and use _.capitalize in the callback
+    // Tip: Make beer_data_3.js look like beer_data_4.js
     function capitalizeCity (data) {
       // FILL IN FUNCTION
       return  FILL_ME_IN;
@@ -41,7 +47,8 @@ describe("About Applying What We Have Learnt", function () {
   it("removes whitespace from street address", function () {
     // Create a function named trimStreetAddress that returns an array
     // of objects with whitespace removed from the steet_address property
-    // Tip: use _.map and _.trim
+    // Tip: Return _.map and use _.trim in the callback
+    // Tip: Make beer_data_4.js look like beer_data_5.js
     function trimStreetAddress (data) {
       // FILL IN FUNCTION
       return FILL_ME_IN;
@@ -54,7 +61,8 @@ describe("About Applying What We Have Learnt", function () {
     // Create a function named nestScores that returns an array
     // of objects with all three beer scores inside of a new object
     // named scores and "unsets" the old properties.
-    // Tip: use _.map and _.unset
+    // Tip: Return _.map and use _.unset in the callback
+    // Tip: Make beer_data_5.js look like clean_beer_data.js
     function nestScores (data) {
       // FILL IN FUNCTION
       return FILL_ME_IN;
@@ -64,8 +72,12 @@ describe("About Applying What We Have Learnt", function () {
   });
 
   it("should remove falsely values and return unique", function () {
-    // Complete this exercise to show a surprise on the test page!
-    // use _.compact and _.uniq
+    // Complete this exercise to show a surprise on the test runner page!
+    // Tip: Try using chaining! https://lodash.com/docs#_
+    // Tip: Use _.compact and _.uniq
+    // Tip: Operate on the variable clean_beer_data
+    // Tip: if you get stuck, example solutions are inside
+    // the koans/lodash/solutions directory of this project
     var ary = [false, 0, 0, true, true];
     var final = FILL_ME_IN;
 
@@ -78,7 +90,7 @@ describe("About Applying What We Have Learnt", function () {
   it("should return an array of the top 5 objects by BA score", function () {
     // Try using chaining! https://lodash.com/docs#_
     // Tip: Use _.sortBy, _.reverse, _.take, and _.value
-
+    // Tip: Operate on the variable clean_beer_data
     var top5 = FILL_ME_IN;
     expect(top5).toEqual(top_5_by_ba_score);
   });
@@ -86,7 +98,7 @@ describe("About Applying What We Have Learnt", function () {
   it("should calculate the number of breweries", function () {
     // Try using chaining! https://lodash.com/docs#_
     // Tip: _.filter and _.size
-
+    // Tip: Operate on the variable clean_beer_data
     var number_of_breweries = FILL_ME_IN;
     expect(number_of_breweries).toEqual(9);
   });
@@ -94,7 +106,7 @@ describe("About Applying What We Have Learnt", function () {
   it("should calculate the avg BA score", function () {
     // Try using chaining! https://lodash.com/docs#_
     // Tip: _.map and _.mean
-
+    // Tip: Operate on the variable clean_beer_data
     var average_ba_score = FILL_ME_IN;
     expect(average_ba_score).toEqual(76.66037735849056);
   });
@@ -103,7 +115,7 @@ describe("About Applying What We Have Learnt", function () {
     // Try using chaining! https://lodash.com/docs#_
     // Tip: _.map, _.countBy, _.toPairs, _.sortBy (use our sorting function),
     // _.take, _.fromPairs, _.keys, and _.first!!! Whew!
-
+    // Tip: Operate on the variable clean_beer_data
     function sortPairs (p) {
 	     return -p[1];
      }
