@@ -187,7 +187,6 @@ var objB = _.pick(objA, ['car', 'age']);
           <ul>
             <li>Data Processing</li>
             <li>Event Management</li>
-            <li>Object Management</li>
             <li>Language normalization</li>
           </ul>
         </section>
@@ -199,92 +198,6 @@ var objB = _.pick(objA, ['car', 'age']);
 
         <section>
           <h2>More Examples</h2>
-        </section>
-
-        <section>
-          <h2>Suma Analysis Tools</h2>
-        </section>
-
-        <section>
-          <h3>Example 1</h3>
-          <pre><code data-noescape>
-  function setLocsDisplayStatus () {
-    var states = _.uniq(_.pluck(scope.locs, 'filter'));
-
-    if (_.contains(states, false)) {
-      scope.display = true;
-      scope.locsActive = true;
-    } else {
-      if (!scope.actsActive) {
-        scope.display = false;
-      }
-      scope.locsActive = false;
-    }
-  }
-          </code></pre>
-
-        </section>
-
-        <section>
-          <h3>Example 1</h3>
-          <pre><code data-noescape>
-  function setLocsDisplayStatus () {
-    var states = <mark>_.uniq</mark>(<mark>_.pluck</mark>(scope.locs, 'filter'));
-
-    if (_.contains(states, false)) {
-      scope.display = true;
-      scope.locsActive = true;
-    } else {
-      if (!scope.actsActive) {
-        scope.display = false;
-      }
-      scope.locsActive = false;
-    }
-  }
-          </code></pre>
-
-        </section>
-
-        <section>
-          <h3>Example 1</h3>
-          <pre><code data-noescape>
-  function setLocsDisplayStatus () {
-    var states = _.uniq(_.pluck(scope.locs, 'filter'));
-
-    if (<mark>_.contains</mark>(states, false)) {
-      scope.display = true;
-      scope.locsActive = true;
-    } else {
-      if (!scope.actsActive) {
-        scope.display = false;
-      }
-      scope.locsActive = false;
-    }
-  }
-          </code></pre>
-
-        </section>
-
-        <section>
-          <h3>Example 2</h3>
-          <pre><code data-noescape>
-  chldrnCnts = _.map(chldrn, function (o) {
-    return calcCount(o, coll, prop);
-  });
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Example 2</h3>
-          <pre><code data-noescape>
-  chldrnCnts = <mark>_.map</mark>(chldrn, function (o) {
-    return calcCount(o, coll, prop);
-  });
-          </code></pre>
-        </section>
-
-        <section>
-          <h2>Lodash utilities</h2>
         </section>
 
         <section>
@@ -321,25 +234,61 @@ var objB = _.pick(objA, ['car', 'age']);
 
   // Array's map method.
   ownerArr.map(function(owner){
-     return owner.pets[0].name;
+    return owner.pets[0].name;
   });
-
-  // Lodash
-  _.map(ownerArr, 'pets[0].name');
           </code></pre>
         </section>
 
         <section>
-        <h3>Clone objects</h3>
-        <pre><code data-noescape>
-var objA = {
-  "name": "colin"
-}
+          <h3>Loop and return deeply nested property</h3>
+          <pre><code data-noescape>
+  // Fetch the name of the first pet from each owner
+  var ownerArr = [{
+      "owner": "Colin",
+      "pets": [{"name":"dog1"}, {"name": "dog2"}]
+  }, {
+      "owner": "John",
+      "pets": [{"name":"dog3"}, {"name": "dog4"}]
+  }];
 
-// Lodash
-var objB = _.cloneDeep(objA);
-objB === objA // true
+  // Lodash with callback
+  _.map(ownerArr, function(owner){
+    return owner.pets[0].name
+  });
+
+  // Lodash with shorthand
+  _.map(ownerArr, 'pets[0].name');
+
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Check all persons taller than 190</h3>
+          <pre><code data-noescape>
+  var persons = [
+    { name: 'Bob', height : 195 },
+    { name: 'Stefan', height : 183}
+  ];
+
+  var allPersonsTallerThan190 = _.every(persons, function(person) {
+    return person.height > 190;
+  });
+
+  // => false
         </code></pre>
+        </section>
+
+        <section>
+          <h3>Chaining</h3>
+          <pre><code data-noescape>
+  var ary = [false, 0, 0, true, true];
+  var final = _(ary)
+                .compact()
+                .uniq()
+                .value();
+
+  // => [true]
+          </code></pre>
         </section>
 
         <section>
@@ -363,8 +312,9 @@ objB === objA // true
         <section>
           <h2>Workshop introduction</h2>
           <ul>
-            <li>Open <em>code4lib_javascript_workshop/koans/js/AboutExpects.js</em> in a text editor</li>
+            <li>Open <em>lodash.com</em> in your web browser</li>
             <li>Open <em>code4lib_javascript_workshop/KoansRunnerJS.html</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/koans/js/AboutExpects.js</em> in a text editor</li>
           </ul>
         </section>
 
@@ -378,8 +328,9 @@ objB === objA // true
         <section>
           <h2>Workshop</h2>
           <ul>
-            <li>Open <em>code4lib_javascript_workshop/koans/lodash/AboutCollectionMethods.js</em> in a text editor</li>
-            <li>Open <em>code4lib_javascript_workshop/KoansRunnerLoDash.html</em> in your web browser</li>
+            <li>Open <em>lodash.com</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/<br>KoansRunnerLoDash.html</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/<br>koans/lodash/AboutCollectionMethods.js</em> in a text editor</li>
           </ul>
         </section>
 
